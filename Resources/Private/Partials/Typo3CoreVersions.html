@@ -106,6 +106,12 @@ typo3-version.critical = 11.4.x
 typo3-version.critical = {insecureMajorRelease.nagiosString}
 </f:for>
 </f:if>
-# ------------------------------------------------------------------------------
+<f:if condition="{additionalWarningCoreVersions}">
+# Manual added additional Core versions
+<f:comment><f:for each="{additionalWarningCoreVersions}" as="warningMajorRelease">
+</f:for></f:comment>
+typo3-version.warning = {additionalWarningCoreVersions}
+</f:if>
+            # ------------------------------------------------------------------------------
 # [END] TYPO3 core versions
 # ------------------------------------------------------------------------------

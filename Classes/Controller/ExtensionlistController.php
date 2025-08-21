@@ -87,6 +87,9 @@ class ExtensionlistController extends ActionController
                     'extensionCountInsecureVersions' => $insecureExtensions->count(),
                     'extensionlist' => $insecureExtensionsAndVersionCsv,
                     'insecureCoreVersions' => $insecureTypo3CoreVersions,
+                    'additionalWarningCoreVersions' => $this->extensionConfiguration->get(
+                        $this->extensionKey, 'warningForAdditionalTYPO3CoreVersion'
+                    ),
                 ]
             );
         } else {
